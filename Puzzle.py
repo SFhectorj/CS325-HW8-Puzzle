@@ -8,7 +8,7 @@ def solve_puzzle(Board, Source, Destination):
     # Directions for moving
     # (Left, Right, Up, Down)
     movement_directions = [(-1,0),(1, 0),(0, -1),(0, 1)]
-    rows, cols = len(board), len(board[0])
+    rows, columns = len(board), len(board[0])
 
 
     return
