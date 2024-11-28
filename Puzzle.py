@@ -1,6 +1,6 @@
 from collections import deque
 
-def solve_puzzle(board, source, destination):
+def solve_puzzle(Board, Source, Destination):
     """
     :param Board: 2D list where '-' indicates empty cells and '#' indicates barriers.
     :param Source: Tuple (a, b) representing the starting coordinates.
@@ -10,10 +10,11 @@ def solve_puzzle(board, source, destination):
     # Directions for moving
     # (Left, Right, Up, Down)
     movement_directions = [(-1,0),(1, 0),(0, -1),(0, 1)]
-    rows, columns = len(board), len(board[0])
+    puzzle_rows, puzzle_columns = len(Board), len(Board[0])
 
     # Initialize BFS
-    queue
+    # Dequeue the current_cell and path_so_far
+    queue = deque([(Source,[Source])])
 
 
 
