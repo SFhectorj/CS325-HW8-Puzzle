@@ -9,6 +9,7 @@ def solve_puzzle(Board, Source, Destination):
     """
     # Directions for moving
     # (Left, Right, Up, Down)
+    # Updating to output in form of string
     movement_directions = [(-1,0),(1, 0),(0, -1),(0, 1)]
     puzzle_rows, puzzle_columns = len(Board), len(Board[0])
 
