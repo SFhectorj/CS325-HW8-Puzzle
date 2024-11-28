@@ -15,7 +15,12 @@ def solve_puzzle(Board, Source, Destination):
     # Initialize BFS
     # Dequeue the current_cell and path_so_far
     queue = deque([(Source,[Source])])
+    already_visited = set()
+    already_visited.add(Source)
 
+    # The search must now iterate the board using a loop
+    while queue:
+        current_cell, current_path = queue.popleft()
 
 
     return
