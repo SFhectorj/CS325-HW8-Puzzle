@@ -29,7 +29,7 @@ def solve_puzzle(Board, Source, Destination):
             return current_path, dir_path
 
         # Move to neighbor cells
-        for direction_x, direction_y in movement_directions:
+        for direction_x, direction_y, direction_other in movement_directions:
             neighbor_cell = (current_cell[0] + direction_x, current_cell[1] + direction_y)
 
             # Check for validity of neighbor
@@ -37,22 +37,6 @@ def solve_puzzle(Board, Source, Destination):
             if 0 <= neighbor_cell[0] < puzzle_rows and 0 <= neighbor_cell[1] < puzzle_columns and Board[neighbor_cell[0]][neighbor_cell[1]] == '-' and neighbor_cell not in already_visited:
                 already_visited.add(neighbor_cell)
                 # update path
-                queue.append((neighbor_cell, current_path + [neighbor_cell], ))
+                queue.append((neighbor_cell, current_path + [neighbor_cell], dir_path + direction_other))
     # No path was found
     return None
-
-
-# Example usage:
-puzzle = [
-    ['-', '-', '-', '-', '-'],
-    ['-', '#', '-', '-', '-'],
-    ['-', '#', '-', '#', '-'],
-    ['-', '-', '-', '#', '-'],
-    ['-', '-', '-', '#', '-']
-]
-
-# Test cases
-print(solve_puzzle(puzzle, (0, 2), (2, 2)))  # ([(0, 2), (0, 1), (1, 1), (2, 1), (2, 2)], 'LDDR')
-print(solve_puzzle(puzzle, (0, 0), (4, 4)))  # ([(0, 0), (0, 1), (0, 2), ..., (4, 4)], 'RRRRDDDD')
-print(solve_puzzle(puzzle, (0, 0), (4, 0)))  # None
-print(solve_puzzle(puzzle, (0, 0), (0, 0)))  # ([(0, 0)], '')
