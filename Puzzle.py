@@ -1,3 +1,5 @@
+from collections import deque
+
 def solve_puzzle(board, source, destination):
     """
     :param Board: 2D list where '-' indicates empty cells and '#' indicates barriers.
@@ -9,6 +11,10 @@ def solve_puzzle(board, source, destination):
     # (Left, Right, Up, Down)
     movement_directions = [(-1,0),(1, 0),(0, -1),(0, 1)]
     rows, columns = len(board), len(board[0])
+
+    # Initialize BFS
+    queue
+
 
 
     return
