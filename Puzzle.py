@@ -22,5 +22,13 @@ def solve_puzzle(Board, Source, Destination):
     while queue:
         current_cell, current_path = queue.popleft()
 
+        # Check if current cell is at destination
+        if current_cell == Destination:
+            return current_path
+
+        # Move to neighbor cells
+
+
+
 
     return
