@@ -1,4 +1,4 @@
-def solve_puzzle(Board, Source, Destination):
+def solve_puzzle(board, source, destination):
     """
     :param Board: 2D list where '-' indicates empty cells and '#' indicates barriers.
     :param Source: Tuple (a, b) representing the starting coordinates.
