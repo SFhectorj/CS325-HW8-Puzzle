@@ -27,6 +27,10 @@ def solve_puzzle(Board, Source, Destination):
             return current_path
 
         # Move to neighbor cells
+        for direction_x, direction_y in movement_directions:
+            neighbor_cell = (current_cell[0] + direction_x, current_cell[1] +direction_y)
+
+
 
 
 
