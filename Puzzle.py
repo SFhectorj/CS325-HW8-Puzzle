@@ -32,7 +32,9 @@ def solve_puzzle(Board, Source, Destination):
 
             # Check for validity of neighbor
             # within bounds and empty cell and not already visited
-            if (0 <= neighbor_cell[0] < puzzle_rows and 0 <= neighbor_cell[1] < puzzle_columns)
+            if 0 <= neighbor_cell[0] < puzzle_rows and 0 <= neighbor_cell[1] < puzzle_columns and Board[neighbor_cell[0]][neighbor_cell[1]] == '-' and neighbor_cell not in already_visited:
+                already_visited.add(neighbor_cell)
+
 
 
 
