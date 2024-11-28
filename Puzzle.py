@@ -30,6 +30,10 @@ def solve_puzzle(Board, Source, Destination):
         for direction_x, direction_y in movement_directions:
             neighbor_cell = (current_cell[0] + direction_x, current_cell[1] +direction_y)
 
+            # Check for validity of neighbor
+            # within bounds and empty cell and not already visited
+            if (0 <= neighbor_cell[0] < puzzle_rows and 0 <= neighbor_cell[1] < puzzle_columns)
+
 
 
 
